@@ -2,7 +2,8 @@ import scatterData from './data/ca-habitant.js'
 import caNh100Data from './data/ca-nh-100.js';
 import nhNcData from './data/nh-nc.js';
 import caLivraisonData from './data/ca-livraison.js';
-import magEcommData from './data/ca-livraison copy.js';
+import magEcommData from './data/mag-eco.js';
+import modePaiementData from './data/mode-paiement.js';
 
 const scatter = new Chart(
     document.getElementById('chartHabitant'),
@@ -121,3 +122,29 @@ const NhNc = new Chart(
       }
     },
   });
+
+
+  const modePaiment =  new Chart(
+    document.getElementById('chartModeLivraison'),
+    {
+    type: 'line',
+    data: modePaiementData,
+    options: {
+      responsive: true,
+      scales: {
+        y: {
+          type: 'linear',
+          display: true,
+          position: 'left',
+        }
+      },
+      plugins: {
+        legend: {
+          position: 'top',
+        },
+        title: {
+          display: true,
+          text: 'Chart.js Line Chart'
+        }
+    }
+  }});
