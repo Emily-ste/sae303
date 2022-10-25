@@ -1,7 +1,11 @@
-import scatterData from './data/marge.js'
+import scatterData from './data/ca-habitant.js'
+import caNh100Data from './data/ca-nh-100.js';
+import nhNcData from './data/nh-nc.js';
+import caLivraisonData from './data/ca-livraison.js';
+import magEcommData from './data/ca-livraison copy.js';
 
 const scatter = new Chart(
-    document.getElementById('chartMarge'),
+    document.getElementById('chartHabitant'),
     {
         type: 'scatter',
         data: scatterData,
@@ -13,7 +17,7 @@ const scatter = new Chart(
             },
             title: {
             display: true,
-            text: 'nombre de vente par région'
+            text: 'CA vs Habitant'
             },
             tooltip: {
             callbacks: {
@@ -26,3 +30,94 @@ const scatter = new Chart(
         },
     });
 
+const radar = new Chart(
+    document.getElementById('chartCaNh100'),
+    {
+    type: 'radar',
+    data: caNh100Data,
+    options: {
+      responsive: true,
+      plugins: {
+        title: {
+          display: true,
+          text: 'CA / NA * 100'
+        }
+      },
+      scales: {
+        x: {
+          display: true,
+        },
+        y: {
+          display: true,
+        }
+      }
+    },
+  });
+
+const NhNc = new Chart(
+    document.getElementById('chartNhNc'),
+    {
+    type: 'bar',
+    data: nhNcData,
+    options: {
+      responsive: true,
+      plugins: {
+        title: {
+          display: true,
+          text: 'nombre habitant / nombre commande'
+        }
+      },
+      scales: {
+        x: {
+          display: true,
+        },
+        y: {
+          display: true,
+        }
+      }
+    },
+  });
+
+
+  const caCoutLiv = new Chart(
+    document.getElementById('chartCaCout'),
+    {
+    type: 'doughnut',
+    data: caLivraisonData,
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'top',
+        },
+        title: {
+          display: true,
+          text: 'Part de chaque mode de livraison dans les couts de livraison de Muxe'
+        }
+      }
+    },
+  });
+
+  const magEcomm = new Chart(
+    document.getElementById('chartMagEcomm'),
+    {
+    type: 'bar',
+    data: magEcommData,
+    options: {
+      responsive: true,
+      plugins: {
+        title: {
+          display: true,
+          text: 'pourcentage CA sur type de vente'
+        }
+      },
+      scales: {
+        x: {
+          display: true,
+        },
+        y: {
+          display: true,
+        }
+      }
+    },
+  });
