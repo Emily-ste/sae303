@@ -144,7 +144,7 @@ const NhNc = new Chart(
         },
         title: {
           display: true,
-          text: 'Chart.js Line Chart'
+          text: 'Mode de paiement'
         }
     }
   }});
