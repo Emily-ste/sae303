@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+
+
+body{
+    margin: 0 auto;
+    display: flex;
+}
+
+
+/*LAYOUT*/ 
+
+#mainContent{
+    width: 80%;
+    background-color: #EEEEEE;
+}
+
+#navBar{
+    width: 20%;
+    height: 100vh;
+    background-color: black;
+}
+
+/*NavBar*/
+
+nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.titre{
+    color: white;
+    text-align: center;
+    font-family: 'Prompt', sans-serif;
+    font-size: 40px;
+}
+
+ul{
+    padding: 0;
+    list-style: none;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 250px;
+    position: absolute;
+    top: 100px;
+}
+
+.nav-link{
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+.nav-link:hover{
+    color: gray;
+}
+
+
+
+
+/* MAIN CONTENT */
+
+#dataArea{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.titre-graphique{
+    text-align: center;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 30px;
+}
+
+p{
+    margin: 50px 80px;
+    font-family: 'Open Sans', sans-serif;
+    width: 600px;
+}
+
+#variant-area{
+    display: flex;
+    flex-direction: column;
+}
+
+#variant-area button{
+    margin: 15px;
+    border: none;
+    background-color: rgb(80, 80, 154);
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 12px;
+    color: white;
+}
+
+#variant-area button:hover{
+    background-color: rgb(62, 62, 126);
+}
