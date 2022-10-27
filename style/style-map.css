@@ -1,0 +1,86 @@
+#svg {
+    display: block;
+    margin: auto;
+}
+
+/** La souris change pour un curseur sur un département et le contour est noir avec une épaisseur assez fine */
+.department {
+    cursor: pointer;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: black;
+    stroke-width: 0.5px;
+}
+
+/** Au survol d'un département le contour devient plus épais */
+.department:hover {
+    stroke-width: 2px;
+}
+
+/** Le tooltip est défini avec des propriétés statiques qui conviennent à nos données */
+div.tooltip {
+    position: absolute;
+    opacity:0.8;
+    z-index:1000;
+    text-align:left;
+    border-radius:4px;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    padding:8px;
+    color:#fff;
+    background-color:#000;
+    font: 12px sans-serif;
+    max-width: 300px;
+    height: 60px;
+}
+
+.q0-9 {
+    fill: #63bfff;
+}
+
+.q1-9 {
+    fill: #50aaf1;
+}
+
+.q2-9 {
+    fill: #3f96e3;
+}
+
+.q3-9 {
+    fill: #3281d4;
+}
+
+.q4-9 {
+    fill: #296cc4;
+}
+
+.q5-9 {
+    fill: #2558b3;
+}
+
+.q6-9 {
+    fill: #2443a1;
+}
+
+.q7-9 {
+    fill: #262e8e;
+}
+
+.q8-9 {
+    fill: #27177a;
+}
+
+.map-tooltip {
+    position: absolute;
+    text-align: center;
+    z-index: 1000;
+    color: rgb(0, 0, 0);
+    width: 275px;
+    height: 37px;
+    padding: 2px;
+    font: 12px sans-serif;
+    background: grey;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+}
