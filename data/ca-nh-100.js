@@ -21,8 +21,10 @@ const caNh100Data = {
             0.90,
             1.90
         ],
-        backgroundColor: 'rgb(200, 50, 0, 0.2)',
-        borderColor: 'rgba(255, 50, 0, 0.8)',
+        backgroundColor: 'rgba(209, 52, 91, 0.8)',
+        bordercolor: '#3454D1',
+        pointRadius: 5,
+        pointHoverRadius: 7
       },
     ]
   }

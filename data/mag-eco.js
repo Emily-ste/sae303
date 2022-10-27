@@ -1,19 +1,21 @@
 const magEcommData = {
     labels: [
-      'domicile',
-      'point relais',
-      'retrait sur place'
+      'Cuisine',
+      'Eléctroménager',
+      'Image-Son',
+      'Informatique',
+      'Téléphonie',
     ],
     datasets: [
       {
-        label: 'Vente en ligne',
-        data: [4, 8 ,1 ,4 ,5],
-        backgroundColor: ['#7B1E7A'],
+        label: 'Ventes en ligne',
+        data: [5, 4, 4, 1, 8],
+        backgroundColor: ['#3454D1'],
       },
       {
-        label: 'Vente en magasin',
-        data: [9, 12 , 10, 4 , 12],
-        backgroundColor: ['#1F2041'],
+        label: 'Ventes en magasin',
+        data: [12, 4, 9, 10, 12],
+        backgroundColor: ['#D1345B'],
       },
     ]
   }

@@ -14,18 +14,18 @@ const scatter = new Chart(
         responsive: true,
         plugins: {
             legend: {
-            position: 'top',
+            position: 'hide',
             },
             title: {
             display: true,
             text: 'CA vs Habitant'
             },
             tooltip: {
-            callbacks: {
-                label: (context) => {
-                return context.raw.data
-                }
-            }
+              callbacks: {
+                  label: (context) => {
+                  return context.raw.data
+                  }
+              }
             }
         }
         },
@@ -93,23 +93,43 @@ const NhNc = new Chart(
         },
         title: {
           display: true,
-          text: 'Part de chaque mode de livraison dans les couts de livraison de Muxe'
-        }
+          text: 'Cout en pourcentage par mode de livraison'
+        },
       }
     },
   });
 
+  let  delayed
   const magEcomm = new Chart(
     document.getElementById('chartMagEcomm'),
     {
     type: 'bar',
     data: magEcommData,
     options: {
+      animation: {
+        onComplete: () => {
+          delayed = true;
+        },
+        delay: (context) => {
+          let delay = 0;
+          if (context.type === 'data' && context.mode === 'default' && !delayed) {
+            delay = context.dataIndex * 300 + context.datasetIndex * 100;
+          }
+          return delay;
+        },
+      },
       responsive: true,
       plugins: {
         title: {
           display: true,
           text: 'pourcentage CA sur type de vente'
+        },
+        tooltip: {
+          callbacks: {
+              label: (context) => {
+              return '% ' + context.dataset.label
+              }
+          }
         }
       },
       scales: {
@@ -130,6 +150,19 @@ const NhNc = new Chart(
     type: 'line',
     data: modePaiementData,
     options: {
+      animations: {
+        y: {
+          easing: 'easeInOutElastic',
+          from: (ctx) => {
+            if (ctx.type === 'data') {
+              if (ctx.mode === 'default' && !ctx.dropped) {
+                ctx.dropped = true;
+                return 0;
+              }
+            }
+          }
+        }
+      },
       responsive: true,
       scales: {
         y: {
@@ -147,4 +180,18 @@ const NhNc = new Chart(
           text: 'Mode de paiement'
         }
     }
-  }});
+  },
+  animations: {
+    y: {
+      easing: 'easeInOutElastic',
+      from: (ctx) => {
+        if (ctx.type === 'data') {
+          if (ctx.mode === 'default' && !ctx.dropped) {
+            ctx.dropped = true;
+            return 0;
+          }
+        }
+      }
+    }
+  },
+});

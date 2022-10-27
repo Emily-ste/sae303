@@ -18,12 +18,20 @@ body{
 #mainContent{
     width: 80%;
     background-color: #EEEEEE;
+    display: flex;
+    justify-content: center;
 }
 
 #navBar{
     width: 20%;
     height: 100vh;
     background: linear-gradient(187deg, rgba(0,0,0,1) 0%, rgb(26, 20, 30) 100%);
+    z-index: 2;
+    box-shadow: rgba(86, 10, 105, 0.4) 5px 0px, 
+            rgba(86, 10, 105, 0.3) 10px 5px, 
+            rgba(86, 10, 105, 0.2) 15px 10px, 
+            rgba(86, 10, 105, 0.1) 20px 15px,
+            rgba(86, 10, 105, 0.05) 25px 20px;
 }
 
 /*NavBar*/
@@ -71,11 +79,11 @@ nav{
 
 /* MAIN CONTENT */
 
+
+
 .content{
     width: 900px;
-    margin-left: 120px;
     padding: 20px;
-    /* border: solid 1px black; */
     margin-top: 20px;
 }
 
@@ -96,6 +104,7 @@ p{
     display: flex;
     justify-content: center;
     padding: 0;
+    margin: 0;
     list-style: none;
 }
 
@@ -112,7 +121,15 @@ p{
 }
 
 #variant-area a:hover{
-    background-color: rgb(80, 43, 67);
+    background-color: rgba(89, 52, 98, 0.9);
+}
+
+.tag-graph3{
+    width: 900px;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .tag-graph2{
@@ -126,10 +143,10 @@ p{
     align-items: center;
 }
 
-.tag-variant1 {
-    width: 600px;
+.tag-variant1,  .tag-variant3 {
+    width: 700px;
 }
 
-.tag-variant2,  .tag-variant3{
+.tag-variant2{
     width: 400px;
 }
