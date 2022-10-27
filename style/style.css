@@ -8,6 +8,10 @@ body{
     display: flex;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 
 /*LAYOUT*/ 
 
@@ -19,7 +23,7 @@ body{
 #navBar{
     width: 20%;
     height: 100vh;
-    background-color: black;
+    background: linear-gradient(187deg, rgba(0,0,0,1) 0%, rgb(26, 20, 30) 100%);
 }
 
 /*NavBar*/
@@ -38,7 +42,7 @@ nav{
     font-size: 40px;
 }
 
-ul{
+#nav-ul{
     padding: 0;
     list-style: none;
     display: flex;
@@ -67,10 +71,12 @@ ul{
 
 /* MAIN CONTENT */
 
-#dataArea{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+.content{
+    width: 900px;
+    margin-left: 120px;
+    padding: 20px;
+    /* border: solid 1px black; */
+    margin-top: 20px;
 }
 
 .titre-graphique{
@@ -86,20 +92,44 @@ p{
 }
 
 #variant-area{
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
 }
 
-#variant-area button{
-    margin: 15px;
-    border: none;
-    background-color: rgb(80, 80, 154);
-    text-decoration: none;
-    padding: 15px 30px;
+#variant-area li{
+    margin: 10px;
+}
+
+#variant-area a{
+    background-color: rgb(89, 52, 98);
+    padding: 7px 20px;
     border-radius: 12px;
     color: white;
+    font-size: 20px;
 }
 
-#variant-area button:hover{
-    background-color: rgb(62, 62, 126);
+#variant-area a:hover{
+    background-color: rgb(80, 43, 67);
+}
+
+.tag-graph2{
+    overflow: scroll;
+    height: 90vh;
+}
+
+.js-variant{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tag-variant1 {
+    width: 600px;
+}
+
+.tag-variant2,  .tag-variant3{
+    width: 400px;
 }

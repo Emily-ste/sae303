@@ -13,48 +13,86 @@
     <link rel="stylesheet" href="style/style-map.css">
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script defer src="data/map.js"></script>
+    <!-- uikit -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/js/uikit-icons.min.js"></script>
 
     <title>SAE 303</title>
 
 
 
 </head>
-<body>
-    <!-- <div id="navBar">
+<body uk-filter="target: .js-filter; animation: delayed-fade">
+    <div id="navBar">
         <h1 class="titre">SAE303</h1>
         <nav>
-            <ul>
-                <li><a class="nav-link" href="#">Graph 1</a></li>
-                <li><a class="nav-link" href="#">Graph 2</a></li>
-                <li><a class="nav-link" href="#">Graph 3</a></li>
-                <li><a class="nav-link" href="#">Graph 4</a></li>
+            <ul id="nav-ul">
+                <li><a uk-filter-control=".tag-graph1" class="uk-active nav-link" href="#">Graph 1</a></li>
+                <li><a uk-filter-control=".tag-graph2" class="nav-link" href="#">Graph 2</a></li>
+                <li><a uk-filter-control=".tag-graph3" class="nav-link" href="#">Graph 3</a></li>
+                <li><a uk-filter-control=".tag-graph4" class="nav-link" href="#">Graph 4</a></li>
+                <li><a uk-filter-control=".tag-graph5" class="nav-link" href="#">Graph 5</a></li>
             </ul>
         </nav>
     </div>
     
     <div id="mainContent">
-            <h2 class="text-center titre-graphique">Titre graphique</h2>
-            <div id="dataArea">
-                <img src="https://via.placeholder.com/750x450" alt="">
-                <div id="variant-area">
-                    <button type="button">Variant 1</button>
-                    <button type="button">Variant 2</button>
-                    <button type="button">Variant 3</button>
-                    <button type="button">Variant 4</button>
+            <div class="js-filter">
+                
+                <div class="tag-graph1 content">
+                    <h2 class="titre-graphique">Titre graphique</h2>
+                    <canvas id="chartHabitant"></canvas>
+                    <p>allo</p>
                 </div>
-            </div>  
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos unde soluta exercitationem deserunt voluptatibus corporis tempora repudiandae, minus dignissimos porro, in mollitia maiores possimus, assumenda laborum numquam ullam rem! Odio!  </p>
-    </div> -->
 
-    <div style="width: 800px;">
-        <canvas id="chartHabitant"></canvas>
-        <canvas id="chartCaNh100"></canvas>
-        <canvas id="chartNhNc"></canvas>
-        <canvas id="chartCaCout"></canvas>
-        <canvas id="chartMagEcomm"></canvas>
-        <canvas id="chartModeLivraison"></canvas>
+                <div class="tag-graph3 content">
+                    <h2 class="titre-graphique">Titre graphique</h2>
+                    <canvas id="chartMagEcomm"></canvas>
+                    <p>bidule</p>
+                </div>
+
+                <div class="tag-graph4 content">
+                    <h2 class="titre-graphique">Titre graphique</h2>
+                    <canvas id="chartModeLivraison"></canvas>
+                    <p>alo</p>
+                </div>
+
+                <div class="tag-graph2 content">
+                    <div uk-filter="target: .js-variant; animation: delayed-fade">
+                        <ul id="variant-area">
+                            <li><a uk-filter-control=".tag-variant1" class="nav-link" href="#">Variant&nbsp1</a></li>
+                            <!-- <li><a uk-filter-control=".tag-variant2" class="nav-link" href="#">Variant&nbsp2</a></li> -->
+                            <li><a uk-filter-control=".tag-variant3" class="nav-link" href="#">Variant&nbsp3</a></li>
+                            <li><a uk-filter-control=".tag-variant4" class="nav-link" href="#">Variant&nbsp4</a></li>
+                        </ul>
+                        
+                        <div class="js-variant">
+                            <div class="tag-variant1">
+                                <h2 class="titre-graphique">TITRE</h2>
+                                <canvas id="chartCaNh100"></canvas>
+                                <p>Lorem ipsum dolor sit amet.</p>
+                            </div>
+                            <!-- <div class="tag-variant2">
+                                <h2 class="titre-graphique">TITRE</h2>
+                                <canvas id="chartNhNc"></canvas>
+                                <p>Lorem ipsum dolor sit amet.</p>
+                            </div> -->
+                            <div class="tag-variant3">
+                                <h2 class="titre-graphique">TITRE</h2>
+                                <canvas id="chartCaCout"></canvas>
+                                <p>Lorem ipsum dolor sit amet.</p>
+                            </div>
+                            <div class="tag-variant4">
+                                <h2 class="titre-graphique">TITRE</h2>
+                                <div id="map"></div>
+                                <p>Lorem ipsum dolor sit amet.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+
+            </div>  
     </div>
 
-    <div id="map"></div>
 </body>
 </html>
