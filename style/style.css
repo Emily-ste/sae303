@@ -135,7 +135,7 @@ p{
 
 .tag-graph2{
     overflow: scroll;
-    height: 90vh;
+    height: 100vh;
 }
 
 .js-variant{
@@ -152,11 +152,11 @@ p{
     color: red;
 }
 
-/* .tag-variant2{
+.tag-variant2{
     display: flex;
     flex-direction: column;
     align-items: center;
-} */
+}
 
 #radar{
     display: block;
