@@ -28,10 +28,10 @@
         <h1 class="titre">SAE303</h1>
         <nav>
             <ul id="nav-ul">
-                <li><a uk-filter-control=".tag-graph1" class="uk-active nav-link" href="#">Graph 1</a></li>
-                <li><a uk-filter-control=".tag-graph2" class="nav-link" href="#">Graph 2</a></li>
-                <li><a uk-filter-control=".tag-graph3" class="nav-link" href="#">Graph 3</a></li>
-                <li><a uk-filter-control=".tag-graph4" class="nav-link" href="#">Graph 4</a></li>
+                <li><a uk-filter-control=".tag-graph1" class="uk-active nav-link" href="#">e-commerce / en magasin</a></li>
+                <li><a uk-filter-control=".tag-graph2" class="nav-link" href="#">Différences régionales</a></li>
+                <li><a uk-filter-control=".tag-graph3" class="nav-link" href="#">Moyens de retrait</a></li>
+                <li><a uk-filter-control=".tag-graph4" class="nav-link" href="#">Modes de paiement</a></li>
             </ul>
         </nav>
     </div>
@@ -83,15 +83,14 @@
                     <div uk-filter="target: .js-variant">
                         <ul id="variant-area">
                             <li><a uk-filter-control=".tag-variant1" class="nav-link" href="#">Variant&nbsp1</a></li>
-                            <!-- <li><a uk-filter-control=".tag-variant2" class="nav-link" href="#">Variant&nbsp2</a></li> -->
-                            <li><a uk-filter-control=".tag-variant3" class="nav-link" href="#">Variant&nbsp2</a></li>
-                            <li><a uk-filter-control=".tag-variant4" class="nav-link" href="#">Variant&nbsp3</a></li>
+                            <li><a uk-filter-control=".tag-variant2" class="nav-link" href="#">Variant&nbsp2</a></li>
+                            <li><a uk-filter-control=".tag-variant3" class="nav-link" href="#">Variant&nbsp3</a></li>
                         </ul>
                         
                         <div class="js-variant">
-                            <div class="tag-variant4">
+                            <div class="tag-variant3">
                                 <h2 class="titre-graphique">Population de chaque région de France</h2>
-                                <span><em>Nous nous sommes demandé comment pouvions-nous mobiliser les données régionales à notre disposition pour en tirer une recommandation. Pour commencer, nous avons récolté puis modélisé le nombre d'habitants de chaque région de France.</em></span>
+                                <p><em>Nous nous sommes demandé comment pouvions-nous mobiliser les données régionales à notre disposition pour en tirer une recommandation. Pour commencer, nous avons récolté puis modélisé le nombre d'habitants de chaque région de France.</em></p>
                                 <div id="map"></div>
                                 <p>Afin de mettre en relation le chiffre d'affaires de Muxe avec le nombre d'habitants 
                                     des régions de France il était essentiel de prouver que le chiffre d'affaires obtenu de change 
@@ -104,11 +103,12 @@
                                 <canvas id="chartHabitant"></canvas>
                                 <p>Si les données étudiées étaient proportionnelles, les points du nuage de points auraient formé une diagonale plus claire. Ce nuage de points montre bien que la corrélation entre le chiffre d'affaires et la population de chaque région est assez floue pour permettre des variations dont on peut prendre avantage. Ces variations sont plus visibles sur le prochain graphique. </p>
                             </div>
-                            <div class="tag-variant3">
+                            <div class="tag-variant2">
                                 <h2 class="titre-graphique">Chiffre d'affaires gagné pour 100 habitants de chaque région de France.</h2>
-                                <canvas id="chartCaNh100"></canvas>
+                                <div id="radar"><canvas id="chartCaNh100"></canvas></div>
                                 <p>
                                     <em>(Chiffre d'affaires gagné pour 100 habitants équivaut au chiffre d'affaires divisé par le nombre d'habitants multiplié par 100)</em><br><br>
+
                                     Nous avons choisi de modéliser nos données sous la forme d'un diagramme en radar afin de faciliter 
                                     la démarcation des irrégularités. Ces données sont intéressantes car elles 
                                     constituent un indicateur plutôt fiable de notre popularité dans chaque région. 
