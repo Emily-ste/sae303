@@ -1,6 +1,5 @@
 import scatterData from './data/ca-habitant.js'
 import caNh100Data from './data/ca-nh-100.js';
-import nhNcData from './data/nh-nc.js';
 import caLivraisonData from './data/ca-livraison.js';
 import magEcommData from './data/mag-eco.js';
 import modePaiementData from './data/mode-paiement.js';
@@ -16,9 +15,6 @@ const scatter = new Chart(
             legend: {
             position: 'hide',
             },
-            title: {
-            display: true,
-            text: 'CA vs Habitant'
             },
             tooltip: {
               callbacks: {
@@ -29,7 +25,7 @@ const scatter = new Chart(
             }
         }
         },
-    });
+    );
 
 const radar = new Chart(
     document.getElementById('chartCaNh100'),
@@ -39,34 +35,6 @@ const radar = new Chart(
     options: {
       responsive: true,
       plugins: {
-        title: {
-          display: true,
-          text: 'CA / NA * 100'
-        }
-      },
-      scales: {
-        x: {
-          display: true,
-        },
-        y: {
-          display: true,
-        }
-      }
-    },
-  });
-
-const NhNc = new Chart(
-    document.getElementById('chartNhNc'),
-    {
-    type: 'bar',
-    data: nhNcData,
-    options: {
-      responsive: true,
-      plugins: {
-        title: {
-          display: true,
-          text: 'nombre habitant / nombre commande'
-        }
       },
       scales: {
         x: {
@@ -90,10 +58,6 @@ const NhNc = new Chart(
       plugins: {
         legend: {
           position: 'top',
-        },
-        title: {
-          display: true,
-          text: 'Cout en pourcentage par mode de livraison'
         },
       }
     },
@@ -120,10 +84,6 @@ const NhNc = new Chart(
       },
       responsive: true,
       plugins: {
-        title: {
-          display: true,
-          text: 'pourcentage CA sur type de vente'
-        },
         tooltip: {
           callbacks: {
               label: (context) => {
@@ -175,10 +135,6 @@ const NhNc = new Chart(
         legend: {
           position: 'top',
         },
-        title: {
-          display: true,
-          text: 'Mode de paiement'
-        }
     }
   },
   animations: {

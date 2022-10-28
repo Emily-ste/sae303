@@ -32,7 +32,6 @@
                 <li><a uk-filter-control=".tag-graph2" class="nav-link" href="#">Graph 2</a></li>
                 <li><a uk-filter-control=".tag-graph3" class="nav-link" href="#">Graph 3</a></li>
                 <li><a uk-filter-control=".tag-graph4" class="nav-link" href="#">Graph 4</a></li>
-                <li><a uk-filter-control=".tag-graph5" class="nav-link" href="#">Graph 5</a></li>
             </ul>
         </nav>
     </div>
@@ -41,21 +40,43 @@
             <div class="js-filter">
                 
                 <div class="tag-graph1 content">
-                    <h2 class="titre-graphique">Titre graphique</h2>
+                    <h2 class="titre-graphique">Marges nettes des ventes en e-commerce et en magasin en fonction du type de produit</h2>
                     <canvas id="chartMagEcomm"></canvas>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nemo doloribus doloremque incidunt accusamus porro dolorum optio voluptate consequuntur aperiam.</p>
+                    <p>Ce graphique est assez transparent, 
+                        il met en évidence qu'il serait en notre avantage d'encourager les clients à venir effectuer 
+                        leurs achats en magasin. Il serait même envisageable d'augmenter légèrement le prix 
+                        des produits vendus sur internet afin d'encourager les clients à aller dans les magasins.</p>
                 </div>
 
                 <div class="tag-graph3 content">
-                    <h2 class="titre-graphique">Titre graphique</h2>
+                    <h2 class="titre-graphique">Rapport du chiffre d'affaires divisé par <span class="textRed">le cout total du moyen de retrait</span> en fonction du moyen de retrait des commandes </h2>
                     <div style="width: 400px;"><canvas id="chartCaCout" ></canvas></div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ab mollitia porro cum dicta soluta, harum aspernatur cumque qui saepe!</p>
+                    <p>
+                        <em>(<span class="textRed">Cout total du moyen de retrait</span> obtenu en multipliant <span class="textBlue">le cout moyen net </span> de la solution de retrait avec le nombre de commandes effectuées avec la solution de retrait en question)</em><br><br>
+                        <em>(<span class="textBlue">cout moyen net</span> obtenu en soustrayant au coût moyen de la solution de retrait le forfait client de la solution de retrait)</em><br><br>
+                        Ce graphique met en évidence, de façon indépendante du nombre de commandes et de leur montant, 
+                        la rentabilité de chaque moyen de paiement. 
+                        Le retrait sur place est le moyen de retrait le plus rentable d'un facteur de 3 par rapport 
+                        au second moyen le plus rentable. D'un point de vue ergonomique, 
+                        il serait préférable de proposer le retrait sur place comme moyen de retrait par défaut, 
+                        en cachant les deux autres derrière. un dropdown ou un lien cliquable qui les afficherait.
+                    </p>
                 </div>
 
                 <div class="tag-graph4 content">
-                    <h2 class="titre-graphique">Titre graphique</h2>
+                    <h2 class="titre-graphique">Part du chiffre d'affaires de l'entreprise selon le moyen de paiement en fonction du temps. (2021)</h2>
                     <canvas id="chartModeLivraison"></canvas>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam quae laboriosam tempore voluptates nam beatae vitae, dolorum assumenda eveniet adipisci?</p>
+                    <p>On peut penser de prime abord que Paypal serait un moyen de paiement en hausse remarquable, 
+                        et bien que ce soit le cas aux États unis depuis 2012, nos données montrent que cela ne s'applique pas à Muxe. 
+                        Ce graph montre bien que la carte bleue reste le moyen de paiement le plus populaire d'un facteur de 7 par 
+                        rapport au Virement qui est en deuxième position et d'un facteur de 16 par rapport à Paypal. De plus, 
+                        Paypal prend une taxe de 3% +  0,35€ pour les transactions nationales commerciales là ou les paiements 
+                        par carte bleue ne souffrent que d'une taxe de 0,9% à 2% sans compter la TVA. 
+                        Étant donné que Paypal soit un moyen peu populaire, 
+                        et que le virement soit assez rebutant pour nous perdre des clients lors du tunnel d'achats, 
+                        il est prudent de mettre en avant la carte bleue. 
+                        On peut par exemple envisager de faire de la carte bleu le moyen de paiement par défaut, 
+                        et cacher les deux autres derrière un dropdown ou un lien cliquable afin d'alléger le tunnel d'achats.</p>
                 </div>
 
                 <div class="tag-graph2 content">
@@ -68,25 +89,35 @@
                         </ul>
                         
                         <div class="js-variant">
-                            <div class="tag-variant1">
-                                <h2 class="titre-graphique">TITRE</h2>
-                                <canvas id="chartHabitant"></canvas>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam quae laboriosam tempore voluptates nam beatae vitae, dolorum assumenda eveniet adipisci?</p>
-                            </div>
-                            <!-- <div class="tag-variant2">
-                                <h2 class="titre-graphique">TITRE</h2>
-                                <canvas id="chartNhNc"></canvas>
-                                <p>Lorem ipsum dolor sit amet.</p>
-                            </div> -->
-                            <div class="tag-variant3">
-                                <h2 class="titre-graphique">TITRE</h2>
-                                <canvas id="chartCaNh100"></canvas>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam quae laboriosam tempore voluptates nam beatae vitae, dolorum assumenda eveniet adipisci?</p>
-                            </div>
                             <div class="tag-variant4">
-                                <h2 class="titre-graphique">TITRE</h2>
+                                <h2 class="titre-graphique">Population de chaque région de France</h2>
+                                <span><em>Nous nous sommes demandé comment pouvions-nous mobiliser les données régionales à notre disposition pour en tirer une recommandation. Pour commencer, nous avons récolté puis modélisé le nombre d'habitants de chaque région de France.</em></span>
                                 <div id="map"></div>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam quae laboriosam tempore voluptates nam beatae vitae, dolorum assumenda eveniet adipisci?</p>
+                                <p>Afin de mettre en relation le chiffre d'affaires de Muxe avec le nombre d'habitants 
+                                    des régions de France il était essentiel de prouver que le chiffre d'affaires obtenu de change 
+                                    région n'est pas proportionnel au nombre d'habitants. Car le cas inverse signifierait 
+                                    qu'il n'y a aucune région où Muxe est plus populaire ou plus connu, rendant la mise en 
+                                    place d'une stratégie plus difficile.</p>
+                            </div>
+                            <div class="tag-variant1">
+                                <h2 class="titre-graphique">Chiffre d'affaire en fonction de la popultion de chaque région de France</h2>
+                                <canvas id="chartHabitant"></canvas>
+                                <p>Si les données étudiées étaient proportionnelles, les points du nuage de points auraient formé une diagonale plus claire. Ce nuage de points montre bien que la corrélation entre le chiffre d'affaires et la population de chaque région est assez floue pour permettre des variations dont on peut prendre avantage. Ces variations sont plus visibles sur le prochain graphique. </p>
+                            </div>
+                            <div class="tag-variant3">
+                                <h2 class="titre-graphique">Chiffre d'affaires gagné pour 100 habitants de chaque région de France.</h2>
+                                <canvas id="chartCaNh100"></canvas>
+                                <p>
+                                    <em>(Chiffre d'affaires gagné pour 100 habitants équivaut au chiffre d'affaires divisé par le nombre d'habitants multiplié par 100)</em><br><br>
+                                    Nous avons choisi de modéliser nos données sous la forme d'un diagramme en radar afin de faciliter 
+                                    la démarcation des irrégularités. Ces données sont intéressantes car elles 
+                                    constituent un indicateur plutôt fiable de notre popularité dans chaque région. 
+                                    En Corse, par exemple, malgré son faible nombre d'habitants on compte autant d'achats 
+                                    qu'en Normandie ou en Bretagne, qui ont un nombre d'habitants 10 fois supérieurs à celui de la Corse. 
+                                    Même chose pour l'Occitanie et le Grand Est qui ont un nombre d'habitant 16 fois plus grand. 
+                                    On devrait donc investir dans notre marché corse (mettre à disposition plus de points relais, 
+                                    installer plus d'établissements Muxe)
+                                </p>
                             </div>
                         </div>
                     </div>

@@ -20,6 +20,8 @@ body{
     background-color: #EEEEEE;
     display: flex;
     justify-content: center;
+    height: 100vh;
+    overflow: scroll;
 }
 
 #navBar{
@@ -84,7 +86,6 @@ nav{
 .content{
     width: 900px;
     padding: 20px;
-    margin-top: 20px;
 }
 
 .titre-graphique{
@@ -96,7 +97,7 @@ nav{
 p{
     margin: 50px 80px;
     font-family: 'Open Sans', sans-serif;
-    width: 600px;
+    width: 800px;
 }
 
 #variant-area{
@@ -149,4 +150,12 @@ p{
 
 .tag-variant2{
     width: 400px;
+}
+
+.textBlue{
+    color: blue;
+}
+
+.textRed{
+    color: red;
 }
